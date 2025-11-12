@@ -1,0 +1,51 @@
+═══════════════════════════════════════════════════════════════
+  PUSH TO GITHUB - Home-Page-07112025
+═══════════════════════════════════════════════════════════════
+
+STEP 1: Create Repository on GitHub
+────────────────────────────────────────────────────────────────
+Go to: https://github.com/new
+
+Repository name: Home-Page-07112025
+Description: MÉTIS Works Landing Page
+Public: YES
+Initialize: NO (uncheck everything)
+
+Click: "Create repository"
+
+
+STEP 2: Push Your Code (Copy & Paste These Commands)
+────────────────────────────────────────────────────────────────
+cd /Users/luisatrogu/Desktop/Test
+
+git remote add origin https://github.com/luisatrogu-sketch/Home-Page-07112025.git
+
+git branch -M main
+
+git push -u origin main
+
+
+STEP 3: Authenticate
+────────────────────────────────────────────────────────────────
+Username: luisatrogu-sketch
+Password: [Use Personal Access Token]
+
+Get token at: https://github.com/settings/tokens
+Scope needed: ✓ repo
+
+
+RESULT
+────────────────────────────────────────────────────────────────
+Repository: https://github.com/luisatrogu-sketch/Home-Page-07112025
+Files: 22 files, 5 commits
+Status: ✅ Ready to push!
+
+
+ENABLE GITHUB PAGES (Optional - Free Hosting)
+────────────────────────────────────────────────────────────────
+Settings → Pages → Source: main → Folder: / → Save
+
+Live site: https://luisatrogu-sketch.github.io/Home-Page-07112025/
+
+═══════════════════════════════════════════════════════════════
+

@@ -1,0 +1,68 @@
+═══════════════════════════════════════════════════════════════
+  SETUP GITHUB ACCESS - Quick Guide
+═══════════════════════════════════════════════════════════════
+
+STEP 1: Get Personal Access Token
+───────────────────────────────────────────────────────────────
+1. Go to: https://github.com/settings/tokens
+
+2. Click: "Generate new token" → "Generate new token (classic)"
+
+3. Settings:
+   Name: Cursor AI Git Access
+   Expiration: 90 days
+   Scopes: ✓ repo (check this box)
+
+4. Click: "Generate token"
+
+5. COPY THE TOKEN! (starts with ghp_...) 
+   You won't see it again!
+
+
+STEP 2: Configure Git to Save Credentials
+───────────────────────────────────────────────────────────────
+Copy and paste these commands:
+
+cd /Users/luisatrogu/Desktop/Test
+
+git config credential.helper osxkeychain
+
+git push -u origin main
+
+
+STEP 3: Enter Credentials When Prompted
+───────────────────────────────────────────────────────────────
+Username: luisatrogu-sketch
+Password: [Paste your token here - ghp_xxx...]
+
+
+DONE! ✅
+───────────────────────────────────────────────────────────────
+After this one-time setup:
+- Your credentials are saved securely in macOS Keychain
+- I can push automatically in the future
+- No more manual authentication needed!
+
+
+VERIFY IT WORKED
+───────────────────────────────────────────────────────────────
+Check GitHub: https://github.com/luisatrogu-sketch/Home-Page-07112025
+
+You should see:
+✓ 7 new commits
+✓ Updated to v1.0.3
+✓ New files and documentation
+
+
+SECURITY NOTES
+───────────────────────────────────────────────────────────────
+✓ Token stored securely in macOS Keychain
+✓ Only has 'repo' access (can't change account settings)
+✓ Set to expire in 90 days (you can regenerate)
+✓ Can be deleted anytime at: https://github.com/settings/tokens
+
+
+═══════════════════════════════════════════════════════════════
+See SETUP_GITHUB_ACCESS.md for detailed instructions
+═══════════════════════════════════════════════════════════════
+

@@ -63,7 +63,7 @@ body {
 .content-container {
     position: absolute;
     left: 123px;
-    top: 409px;
+    top: 358px;
     width: 1397px;
     display: flex;
     flex-direction: column;
@@ -106,7 +106,7 @@ body {
 .contact-info {
     position: absolute;
     left: 133px;
-    top: 879px;
+    top: 819px;
     width: 1020px;
     height: 128px;
     font-family: 'Canela', Georgia, serif;
@@ -160,7 +160,7 @@ body {
 
     .content-container {
         left: 100px;
-        top: 300px;
+        top: 250px;
         width: calc(100% - 200px);
         gap: 20px;
     }
@@ -180,7 +180,7 @@ body {
 
     .contact-info {
         left: 100px;
-        top: 650px;
+        top: 580px;
         font-size: 24px;
         width: calc(100% - 200px);
     }
@@ -219,7 +219,7 @@ body {
 
     .content-container {
         left: 30px;
-        top: 150px;
+        top: 130px;
         width: calc(100% - 60px);
         gap: 15px;
     }
@@ -239,7 +239,7 @@ body {
 
     .contact-info {
         left: 30px;
-        top: 420px;
+        top: 380px;
         font-size: 18px;
         width: calc(100% - 60px);
     }

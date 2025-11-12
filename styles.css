@@ -10,6 +10,7 @@ body {
     background-color: #F6F3EF;
     color: #000000;
     overflow-x: hidden;
+    overflow-y: auto;
     position: relative;
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
@@ -121,7 +122,7 @@ body {
 .background-shapes {
     position: absolute;
     left: 1184px;
-    top: -1px;
+    top: 0;
     width: 353.29px;
     height: 369.69px;
     z-index: 1;
@@ -133,6 +134,9 @@ body {
     height: auto;
     display: block;
     opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 /* Responsive Design */

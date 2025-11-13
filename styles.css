@@ -59,16 +59,23 @@ body {
     z-index: 10;
 }
 
-/* Content Container with Fixed 20px Gap */
-.content-container {
+/* Main Content Wrapper with 75px Gap */
+.main-content-wrapper {
     position: absolute;
     left: 123px;
     top: 358px;
     width: 1397px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 75px;
     z-index: 10;
+}
+
+/* Content Container with 20px Internal Gap */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* Main Heading */
@@ -104,18 +111,13 @@ body {
 
 /* Contact Information */
 .contact-info {
-    position: absolute;
-    left: 133px;
-    top: 819px;
     width: 1020px;
-    height: 128px;
     font-family: 'Canela', Georgia, serif;
     font-weight: 400;
     font-size: 30px;
     line-height: 1.51em;
     color: #C76A47;
     margin: 0;
-    z-index: 10;
 }
 
 /* Background Decorative Shapes */
@@ -158,10 +160,14 @@ body {
         width: auto;
     }
 
-    .content-container {
+    .main-content-wrapper {
         left: 100px;
         top: 250px;
         width: calc(100% - 200px);
+        gap: 60px;
+    }
+
+    .content-container {
         gap: 20px;
     }
 
@@ -179,10 +185,8 @@ body {
     }
 
     .contact-info {
-        left: 100px;
-        top: 580px;
         font-size: 24px;
-        width: calc(100% - 200px);
+        width: 100%;
     }
 
     .background-shapes {
@@ -217,10 +221,14 @@ body {
         font-size: 28px;
     }
 
-    .content-container {
+    .main-content-wrapper {
         left: 30px;
         top: 130px;
         width: calc(100% - 60px);
+        gap: 50px;
+    }
+
+    .content-container {
         gap: 15px;
     }
 
@@ -238,10 +246,8 @@ body {
     }
 
     .contact-info {
-        left: 30px;
-        top: 380px;
         font-size: 18px;
-        width: calc(100% - 60px);
+        width: 100%;
     }
 
     .background-shapes {

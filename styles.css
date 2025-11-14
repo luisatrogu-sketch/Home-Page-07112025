@@ -120,6 +120,42 @@ body {
     margin: 0;
 }
 
+/* Background Ellipses */
+.background-ellipses {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.ellipse-7 {
+    position: absolute;
+    left: -442.08px;
+    top: 124.36px;
+    width: 657.69px;
+    height: 1041.28px;
+}
+
+.ellipse-5 {
+    position: absolute;
+    left: 676px;
+    top: -508px;
+    width: 998.61px;
+    height: 1097.73px;
+}
+
+.ellipse-6 {
+    position: absolute;
+    left: 985px;
+    top: 533px;
+    width: 674.61px;
+    height: 1043.98px;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 1440px) {
     .container {
@@ -169,6 +205,27 @@ body {
         font-size: 24px;
         width: 100%;
     }
+
+    .ellipse-7 {
+        left: -309px;
+        top: 87px;
+        width: 460px;
+        height: 729px;
+    }
+
+    .ellipse-5 {
+        left: 473px;
+        top: -356px;
+        width: 699px;
+        height: 768px;
+    }
+
+    .ellipse-6 {
+        left: 689px;
+        top: 373px;
+        width: 472px;
+        height: 731px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -216,6 +273,27 @@ body {
     .contact-info {
         font-size: 18px;
         width: 100%;
+    }
+
+    .ellipse-7 {
+        left: -221px;
+        top: 62px;
+        width: 329px;
+        height: 521px;
+    }
+
+    .ellipse-5 {
+        left: 338px;
+        top: -254px;
+        width: 499px;
+        height: 549px;
+    }
+
+    .ellipse-6 {
+        left: 493px;
+        top: 267px;
+        width: 337px;
+        height: 522px;
     }
 }
 

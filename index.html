@@ -34,6 +34,7 @@ section[id]{scroll-margin-top:100px}
   header{gap:16px !important}
 }
 @media (max-width: 760px){
+  .frame header[style*="flex-direction: row"]>*, .page header[style*="flex-direction: row"]>*{flex-basis:auto !important}
   .frame header, .page header{flex-direction:row !important;flex-wrap:wrap !important;align-items:center !important;justify-content:flex-start !important;gap:10px !important;padding:10px 24px !important}
   .frame header>a:first-child, .page header>a:first-child{flex:0 0 auto !important;gap:10px !important;flex-wrap:nowrap !important}
   .frame header>a:first-child>*, .page header>a:first-child>*{flex:0 0 auto !important;flex-basis:auto !important}
@@ -43,6 +44,14 @@ section[id]{scroll-margin-top:100px}
   .frame header nav[aria-label="Main"] a, .page header nav[aria-label="Main"] a{flex:0 0 auto !important;flex-basis:auto !important;min-height:0 !important;padding:0 !important}
   .frame header nav[aria-label="Main"] a[href="#contact"]{min-height:34px !important;padding:0 14px !important}
   .frame header>div:last-child, .page header>div:last-child{flex:0 0 auto !important;flex-basis:auto !important}
+}
+
+@media (max-width: 760px){
+  .frame header .menu-toggle, .page header .menu-toggle{display:inline-flex !important;flex:0 0 auto !important;flex-basis:auto !important;width:auto !important;margin-left:auto !important;justify-content:center}
+  .frame header nav[aria-label="Main"], .page header nav[aria-label="Main"]{display:none !important}
+  .frame header.menu-open nav[aria-label="Main"], .page header.menu-open nav[aria-label="Main"]{display:flex !important;flex-direction:column !important;align-items:flex-start !important;flex-basis:100% !important;gap:14px !important;padding:12px 0 6px !important;font-size:17px !important;text-align:left !important}
+  .frame header.menu-open nav[aria-label="Main"] a, .page header.menu-open nav[aria-label="Main"] a{padding:0 !important;margin:0 !important;min-height:0 !important;align-self:flex-start !important}
+  .frame header.menu-open nav[aria-label="Main"] a[href="#contact"][style*="border-radius: 999px"]{padding:0 18px !important;min-height:40px !important}
 }
 </style>
 </head>
@@ -59,7 +68,7 @@ section[id]{scroll-margin-top:100px}
 </svg>
 <span style="font-size: 20px; font-weight: 600; letter-spacing: 0.02em;">MÉTIS Works</span>
 </a>
-<nav aria-label="Main" style="display: flex; flex-direction: row; gap: 40px; align-items: center; font-size: 16px; font-weight: 500;">
+<button type="button" class="menu-toggle" aria-expanded="false" aria-label="Menu" style="display:none;align-items:center;gap:8px;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid #1C2224;background:transparent;color:#1C2224;font:600 15px inherit;cursor:pointer;">Menu</button><nav aria-label="Main" style="display: flex; flex-direction: row; gap: 40px; align-items: center; font-size: 16px; font-weight: 500;">
 <a href="#services" style="color: #1C2224;">Services</a>
 <a href="#ways" style="color: #1C2224;">Ways to work</a>
 <a href="#about" style="color: #1C2224;">About</a>
@@ -185,5 +194,22 @@ section[id]{scroll-margin-top:100px}
 </section>
 
 </div>
+
+<script>
+(function(){
+  document.querySelectorAll('header').forEach(function(h){
+    var btn = h.querySelector('.menu-toggle'), nav = h.querySelector('nav[aria-label="Main"]');
+    if (!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = h.classList.toggle('menu-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A') { h.classList.remove('menu-open'); btn.setAttribute('aria-expanded','false'); }
+    });
+  });
+})();
+</script>
+
 </body>
 </html>

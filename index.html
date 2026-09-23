@@ -20,6 +20,7 @@ a{color:#C76A47;text-decoration:none}a:hover{color:#A9552F;text-decoration:under
 .frame>header{position:sticky;top:0;z-index:20;background:#F3F1EC}
 section[id]{scroll-margin-top:100px}
 
+
 @media (max-width: 1000px){
   .page [style*="flex-direction: row"], .frame [style*="flex-direction: row"]{flex-wrap:wrap !important}
   .page [style*="flex-direction: row"]>*, .frame [style*="flex-direction: row"]>*{flex-basis:280px !important}
@@ -31,6 +32,17 @@ section[id]{scroll-margin-top:100px}
   nav[aria-label="Main"]{gap:16px !important;flex-wrap:wrap}
   header>*, nav[aria-label="Main"]>*, a[style*="border-radius: 999px"], span[style*="border-radius: 999px"]{flex-basis:auto !important}
   header{gap:16px !important}
+}
+@media (max-width: 760px){
+  .frame header, .page header{flex-direction:row !important;flex-wrap:wrap !important;align-items:center !important;justify-content:flex-start !important;gap:10px !important;padding:10px 24px !important}
+  .frame header>a:first-child, .page header>a:first-child{flex:0 0 auto !important;gap:10px !important;flex-wrap:nowrap !important}
+  .frame header>a:first-child>*, .page header>a:first-child>*{flex:0 0 auto !important;flex-basis:auto !important}
+  .frame header>a:first-child svg{width:30px !important;height:30px !important}
+  .frame header>a:first-child span{font-size:17px !important}
+  .frame header nav[aria-label="Main"], .page header nav[aria-label="Main"]{flex:1 1 100% !important;flex-basis:100% !important;flex-wrap:nowrap !important;justify-content:space-between !important;gap:10px !important;font-size:15px !important}
+  .frame header nav[aria-label="Main"] a, .page header nav[aria-label="Main"] a{flex:0 0 auto !important;flex-basis:auto !important;min-height:0 !important;padding:0 !important}
+  .frame header nav[aria-label="Main"] a[href="#contact"]{min-height:34px !important;padding:0 14px !important}
+  .frame header>div:last-child, .page header>div:last-child{flex:0 0 auto !important;flex-basis:auto !important}
 }
 </style>
 </head>
